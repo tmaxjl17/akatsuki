@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuraGroup — Dix ombres, un seul dessein</title>
+<meta name="description" content="AuraGroup rassemble dix ninjas déserteurs de rang S. Membres, origines, capacités et registre des missions.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Sprite SVG : le nuage Akatsuki, réutilisé partout -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ak-cloud" viewBox="0 0 100 100">
+      <path d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Écran de démarrage -->
+<div class="boot" id="boot" aria-hidden="true">
+  <svg class="boot__mark" viewBox="0 0 100 100" focusable="false">
+    <defs>
+      <clipPath id="akCloudClip">
+        <path d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z"/>
+      </clipPath>
+    </defs>
+    <path d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z" fill="#141414" stroke="#2A2A2A" stroke-width="1.5"/>
+    <g clip-path="url(#akCloudClip)">
+      <g class="boot__fill">
+        <rect x="0" y="0" width="100" height="100" fill="#DC0000"/>
+        <path class="boot__wave" d="M-100 2c12 0 12 6 24 6s12-6 24-6 12 6 24 6 12-6 24-6 12 6 24 6 12-6 24-6 12 6 24 6 12-6 24-6v-14h-192Z" fill="#DC0000"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
+<!-- Nuages d'ambiance (statiques) -->
+<div class="clouds" id="clouds" aria-hidden="true">
+  <svg class="clouds__item clouds__item--1" focusable="false"><use href="#ak-cloud"/></svg>
+  <svg class="clouds__item clouds__item--2" focusable="false"><use href="#ak-cloud"/></svg>
+  <svg class="clouds__item clouds__item--3" focusable="false"><use href="#ak-cloud"/></svg>
+</div>
+
+<a class="skip-link" href="#membres">Aller aux membres</a>
+
+<header class="nav">
+  <div class="nav__left">
+    <a class="nav__back" href="../">&lsaquo; Propositions</a>
+    <a class="nav__brand" href="#top">
+      <svg class="nav__logo" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+      <span>AuraGroup</span>
+    </a>
+  </div>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a class="nav__link" href="#membres">Membres</a>
+    <a class="nav__link" href="#origines">Origines</a>
+    <a class="nav__link" href="#capacites">Capacités</a>
+    <a class="nav__link" href="#interdits">Interdits</a>
+    <a class="nav__link" href="#missions">Missions</a>
+    <a class="nav__cta" href="#membres">Rejoindre</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-label="Membre à la une">
+
+    <div class="hero__intro">
+      <p class="eyebrow eyebrow--rule">
+        <span class="rule"></span>
+        <span>Membre <span id="heroIndex">01</span> / <span id="heroTotal">10</span></span>
+      </p>
+      <h1 class="hero__name" id="heroName">Pain</h1>
+      <p class="hero__title" id="heroTitle">Le Dieu d'Amegakure</p>
+
+      <div class="switcher">
+        <button class="switcher__prev" type="button" id="prevBtn" aria-label="Membre précédent">&lsaquo;</button>
+        <button class="switcher__next" type="button" id="nextBtn">
+          <span class="switcher__initial" id="nextInitial" aria-hidden="true">I</span>
+          <span class="switcher__text">
+            <span class="switcher__label">Suivant</span>
+            <span class="switcher__name" id="nextName">Itachi</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__stage">
+      <div class="hero__band" id="heroBand"></div>
+      <svg class="hero__ghost" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+      <figure class="hero__media" id="heroMedia">
+        <span class="hero__media-label">Placeholder</span>
+        <span class="hero__media-tag">[IMAGE_HERO_PAIN]</span>
+      </figure>
+    </div>
+
+    <div class="hero__file" id="capacites">
+      <p class="hero__bio" id="heroBio">Chef de l'Akatsuki, Nagato manie le Rinnegan à travers six corps distincts. Il prêche un cycle de haine que seule une douleur partagée pourrait briser, et considère la paix comme une équation à résoudre par la force.</p>
+      <p class="hero__note" id="heroNote">Il n'apparaît jamais en personne : les six Voies de Pain sont des cadavres reliés à son chakra par des récepteurs métalliques, pilotés depuis la tour d'Ame.</p>
+
+      <ul class="abilities" id="heroAbilities">
+        <li class="ability">
+          <span class="ability__kind">Dojutsu</span>
+          <span class="ability__name">Rinnegan</span>
+          <span class="ability__desc">Accès aux six voies et au contrôle total du chakra.</span>
+        </li>
+        <li class="ability">
+          <span class="ability__kind">Technique</span>
+          <span class="ability__name">Shinra Tensei</span>
+          <span class="ability__desc">Répulsion gravitationnelle dévastatrice.</span>
+        </li>
+        <li class="ability">
+          <span class="ability__kind">Ultime</span>
+          <span class="ability__name">Chibaku Tensei</span>
+          <span class="ability__desc">Création d'un satellite de gravité captive.</span>
+        </li>
+      </ul>
+
+      <div class="kinjutsu">
+        <span class="kinjutsu__head">
+          <svg class="kinjutsu__icon" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+          Technique interdite
+        </span>
+        <span class="kinjutsu__name" id="forbName">Rinne Tensei</span>
+        <p class="kinjutsu__desc" id="forbDesc">Rappelle à la vie tous ceux que l'utilisateur a tués dans un même rayon.</p>
+        <span class="kinjutsu__foot">
+          <span class="kinjutsu__cost"><span class="kinjutsu__cost-label">Coût</span><span id="forbCost">La vie de l'invocateur</span></span>
+          <span class="kinjutsu__status" id="forbStatus">Classe Zéro</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Fiche technique : pleine largeur, se met à jour avec le membre affiché -->
+    <dl class="dossier" id="dossier" aria-label="Fiche technique du membre affiché">
+      <div class="dossier__cell"><dt class="dossier__label">Âge</dt><dd class="dossier__value" id="dAge">35</dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Années d'activité</dt><dd class="dossier__value" id="dYears">20</dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Rang</dt><dd class="dossier__value dossier__value--sm" id="dRank">Chef — rang S</dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Affinité</dt><dd class="dossier__value dossier__value--sm" id="dNature">Les cinq natures</dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Anneau</dt><dd class="dossier__value dossier__value--sm"><span id="dRing">Rei 零</span><em id="dFinger">Pouce droit</em></dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Prime</dt><dd class="dossier__value dossier__value--sm" id="dBounty">Inestimable</dd></div>
+      <div class="dossier__cell"><dt class="dossier__label">Statut</dt><dd class="dossier__value dossier__value--sm" id="dStatus">Actif</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===================== ORIGINES ===================== -->
+  <section class="section section--panel origines" id="origines">
+    <div class="origines__head">
+      <p class="eyebrow eyebrow--red">Origines</p>
+      <h2 class="h2">Dix ombres,<br>un seul dessein</h2>
+    </div>
+    <div class="origines__body">
+      <p class="lead">Née dans les ruines d'Amegakure, AuraGroup rassemble des ninjas déserteurs de rang S. Chaque membre porte la robe noire aux nuages écarlates et opère en binôme, dans un secret absolu.</p>
+      <p class="lead">Aucun village ne reconnaît son existence officielle, et pourtant chacun tient un dossier sur elle. Dix anneaux, dix places numérotées : quand un membre tombe, l'anneau revient à Ame et attend son prochain porteur. En vingt ans, l'organisation n'a jamais compté plus de dix noms, ni accepté un seul retrait volontaire.</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__value">10</span>
+          <span class="stat__label">Membres</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">09</span>
+          <span class="stat__label">Bijuu traqués</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">S</span>
+          <span class="stat__label">Rang criminel</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">20</span>
+          <span class="stat__label">Années d'activité</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">00</span>
+          <span class="stat__label">Retrait accordé</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHRONOLOGIE ===================== -->
+  <section class="section chrono" id="chronologie">
+    <div class="section__head">
+      <div class="section__titles">
+        <p class="eyebrow eyebrow--red">Chronologie</p>
+        <h2 class="h2">Vingt ans d'ombre</h2>
+      </div>
+      <p class="section__note">Reconstitution — sources croisées</p>
+    </div>
+    <ol class="tl">
+      <li class="tl__item">
+        <span class="tl__year">An 00</span>
+        <div class="tl__body">
+          <h3 class="tl__title">Les ruines d'Amegakure</h3>
+          <p class="tl__desc">Trois orphelins de la guerre fondent un mouvement pacifiste dans un pays transformé en champ de bataille par ses voisins. Ils sont une trentaine la première année.</p>
+        </div>
+      </li>
+      <li class="tl__item">
+        <span class="tl__year">An 04</span>
+        <div class="tl__body">
+          <h3 class="tl__title">La trahison du pont</h3>
+          <p class="tl__desc">Yahiko meurt dans un piège tendu par Hanzo et la Racine de Konoha. Le mouvement survit à son fondateur, mais plus rien de sa doctrine ne survit à cette nuit-là.</p>
+        </div>
+      </li>
+      <li class="tl__item">
+        <span class="tl__year">An 07</span>
+        <div class="tl__body">
+          <h3 class="tl__title">Les dix anneaux</h3>
+          <p class="tl__desc">Dix anneaux sont forgés, un par doigt, un par place. L'organisation cesse de recruter des convaincus pour ne plus recruter que des déserteurs de rang S.</p>
+        </div>
+      </li>
+      <li class="tl__item">
+        <span class="tl__year">An 11</span>
+        <div class="tl__body">
+          <h3 class="tl__title">Le pacte mercenaire</h3>
+          <p class="tl__desc">Premier contrat vendu à un pays tiers. Les primes financent le réseau d'informateurs, les planques et les sceaux. AuraGroup devient rentable avant de devenir dangereuse.</p>
+        </div>
+      </li>
+      <li class="tl__item">
+        <span class="tl__year">An 15</span>
+        <div class="tl__body">
+          <h3 class="tl__title">Ouverture de la chasse</h3>
+          <p class="tl__desc">Le registre des neuf bijuu est établi, les binômes sont figés, et la statue de scellement est descendue dans la grotte de Kannabi. La traque commence officiellement.</p>
+        </div>
+      </li>
+      <li class="tl__item tl__item--now">
+        <span class="tl__year">An 18</span>
+        <div class="tl__body">
+          <h3 class="tl__title">Konoha</h3>
+          <p class="tl__desc">Six corps entrent dans le village le plus puissant du continent et en ressortent sur un cratère. Plus personne ne parle d'AuraGroup au conditionnel.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== MEMBRES ===================== -->
+  <section class="section membres" id="membres">
+    <div class="section__head">
+      <div class="section__titles">
+        <p class="eyebrow eyebrow--red">Galerie</p>
+        <h2 class="h2">Les membres</h2>
+      </div>
+      <p class="section__note">Cliquez une carte pour l'afficher en héros</p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <!-- ===================== BINÔMES ===================== -->
+  <section class="section section--panel binomes" id="binomes">
+    <div class="section__titles">
+      <p class="eyebrow eyebrow--red">Doctrine</p>
+      <h2 class="h2">Toujours par deux</h2>
+      <p class="lead lead--wide">Aucun membre n'opère seul. Les binômes sont formés pour compenser les faiblesses de chacun et surveiller l'autre : la confiance n'est pas une valeur de l'organisation.</p>
+    </div>
+    <div class="pairs">
+      <article class="pair">
+        <span class="pair__meta">Binôme 01 — Amegakure</span>
+        <h3 class="pair__name">Pain &amp; Konan</h3>
+        <p class="pair__desc">Commandement. Ne quittent jamais la tour d'Ame.</p>
+      </article>
+      <article class="pair">
+        <span class="pair__meta">Binôme 02 — Infiltration</span>
+        <h3 class="pair__name">Itachi &amp; Kisame</h3>
+        <p class="pair__desc">Illusion et puissance brute. Traque du Kyubi.</p>
+      </article>
+      <article class="pair">
+        <span class="pair__meta">Binôme 03 — Artistes</span>
+        <h3 class="pair__name">Sasori &amp; Deidara</h3>
+        <p class="pair__desc">L'éternel contre l'éphémère. Front de Suna.</p>
+      </article>
+      <article class="pair">
+        <span class="pair__meta">Binôme 04 — Mercenaires</span>
+        <h3 class="pair__name">Hidan &amp; Kakuzu</h3>
+        <p class="pair__desc">Immortalité et finances. Surnommés le duo zombie.</p>
+      </article>
+      <article class="pair">
+        <span class="pair__meta">Binôme 05 — Ombre</span>
+        <h3 class="pair__name">Tobi &amp; Zetsu</h3>
+        <p class="pair__desc">Renseignement, logistique et scellement.</p>
+      </article>
+    </div>
+
+    <div class="code">
+      <p class="eyebrow eyebrow--red">Le code</p>
+      <ol class="code__list">
+        <li class="code__rule">
+          <span class="code__num">I</span>
+          <div>
+            <h3 class="code__title">Jamais seul</h3>
+            <p class="code__desc">Aucun déplacement, aucune cible, aucune négociation en solitaire. Le binôme est autant une protection qu'une surveillance.</p>
+          </div>
+        </li>
+        <li class="code__rule">
+          <span class="code__num">II</span>
+          <div>
+            <h3 class="code__title">L'anneau ne quitte pas le doigt</h3>
+            <p class="code__desc">Il sert de sceau, de clé de convocation et de preuve de vie. Le perdre revient à démissionner, et la démission n'existe pas.</p>
+          </div>
+        </li>
+        <li class="code__rule">
+          <span class="code__num">III</span>
+          <div>
+            <h3 class="code__title">La cible avant le camarade</h3>
+            <p class="code__desc">Un binôme se remplace en une saison, un bijuu peut mettre dix ans à réapparaître. L'ordre de priorité n'a jamais été discuté.</p>
+          </div>
+        </li>
+        <li class="code__rule">
+          <span class="code__num">IV</span>
+          <div>
+            <h3 class="code__title">Aucun nom, aucun village</h3>
+            <p class="code__desc">Le bandeau est rayé le jour de l'entrée. Ce qui précède l'anneau ne concerne plus personne — y compris celui qui le porte.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== TECHNIQUES INTERDITES ===================== -->
+  <section class="section interdits" id="interdits">
+    <div class="section__head">
+      <div class="section__titles">
+        <p class="eyebrow eyebrow--red">Kinjutsu</p>
+        <h2 class="h2">Techniques interdites</h2>
+      </div>
+      <p class="section__note">Dix entrées — accès restreint</p>
+    </div>
+    <p class="lead lead--wide">Chaque membre a apporté avec lui une technique que son village avait rayée de ses rouleaux. Toutes se paient : d'un œil, d'un cœur, d'une vie. L'organisation ne les interdit pas — elle les répertorie, et attend de savoir laquelle servira en dernier.</p>
+
+    <div class="kin-table" role="table" aria-label="Registre des techniques interdites">
+      <div class="kin-row kin-row--head" role="row">
+        <span role="columnheader">N°</span>
+        <span role="columnheader">Technique</span>
+        <span role="columnheader">Détenteur</span>
+        <span role="columnheader">Prix à payer</span>
+        <span role="columnheader">Statut</span>
+      </div>
+      <div id="kinBody"></div>
+    </div>
+  </section>
+
+  <!-- ===================== MISSIONS ===================== -->
+  <section class="section missions" id="missions">
+    <div class="section__head">
+      <div class="section__titles">
+        <p class="eyebrow eyebrow--red">Registre</p>
+        <h2 class="h2">Missions réalisées</h2>
+      </div>
+      <p class="section__note">Sept opérations majeures</p>
+    </div>
+    <ol class="log">
+      <li class="log__row">
+        <span class="log__num">01</span>
+        <span class="log__name">Capture de l'Ichibi</span>
+        <span class="log__meta">Sunagakure — Deidara &amp; Sasori</span>
+        <span class="log__tag">Scellé</span>
+      </li>
+      <li class="log__row">
+        <span class="log__num">02</span>
+        <span class="log__name">Traque du Nibi</span>
+        <span class="log__meta">Kumogakure — Hidan &amp; Kakuzu</span>
+        <span class="log__tag">Scellé</span>
+      </li>
+      <li class="log__row">
+        <span class="log__num">03</span>
+        <span class="log__name">Récupération du Sanbi</span>
+        <span class="log__meta">Lac de Kirigakure — Tobi &amp; Deidara</span>
+        <span class="log__tag">Scellé</span>
+      </li>
+      <li class="log__row">
+        <span class="log__num">04</span>
+        <span class="log__name">Élimination du Yonbi</span>
+        <span class="log__meta">Frontière d'Iwa — Kisame</span>
+        <span class="log__tag">Scellé</span>
+      </li>
+      <li class="log__row">
+        <span class="log__num">05</span>
+        <span class="log__name">Assaut sur Konoha</span>
+        <span class="log__meta">Konohagakure — Pain &amp; Konan</span>
+        <span class="log__tag">Village rasé</span>
+      </li>
+      <li class="log__row log__row--muted">
+        <span class="log__num">06</span>
+        <span class="log__name">Capture du Hachibi</span>
+        <span class="log__meta">Kumogakure — Kisame</span>
+        <span class="log__tag">Échec</span>
+      </li>
+      <li class="log__row log__row--muted">
+        <span class="log__num">07</span>
+        <span class="log__name">Capture du Kyubi</span>
+        <span class="log__meta">En cours — Tobi</span>
+        <span class="log__tag">En cours</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta">
+    <div class="cta__text">
+      <p class="eyebrow eyebrow--onred">Recrutement</p>
+      <h2 class="cta__title">Une place se libère rarement</h2>
+    </div>
+    <a class="cta__btn" href="#membres">Consulter les membres</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__quote">
+    <span class="rule rule--wide"></span>
+    <blockquote class="footer__blockquote">« La douleur seule permet de grandir. »</blockquote>
+    <span class="footer__author">Pain — Amegakure</span>
+  </div>
+  <div class="footer__cols">
+    <nav class="footer__col" aria-label="Organisation">
+      <span class="footer__col-title">Organisation</span>
+      <a href="#membres">Membres</a>
+      <a href="#origines">Origines</a>
+      <a href="#capacites">Capacités</a>
+    </nav>
+    <nav class="footer__col" aria-label="Archives">
+      <span class="footer__col-title">Archives</span>
+      <a href="#missions">Missions</a>
+      <a href="#binomes">Binômes</a>
+      <a href="#interdits">Techniques interdites</a>
+      <a href="#chronologie">Chronologie</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/members.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

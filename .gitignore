@@ -1,0 +1,75 @@
+# ---------------------------------------------------------
+# Système
+# ---------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# ---------------------------------------------------------
+# Éditeurs
+# ---------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------
+# Fichiers de travail
+# ---------------------------------------------------------
+*.log
+*.bak
+*.tmp
+*.orig
+*.rej
+/tmp/
+/scratch/
+
+# Exports et sources de maquettes (lourds, hors livrable web)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+
+# Archives déposées par erreur dans le dossier web
+*.zip
+*.rar
+*.7z
+
+# ---------------------------------------------------------
+# Outillage éventuel
+# ---------------------------------------------------------
+# Le projet est en HTML/CSS/JS purs et n'a aucune étape de build.
+# Ces règles ne servent que si un outil est ajouté plus tard.
+node_modules/
+package-lock.json
+yarn.lock
+.env
+.env.local
+dist/
+.cache/
+
+# ---------------------------------------------------------
+# WAMP / serveur local
+# ---------------------------------------------------------
+.htaccess.local
+error_log
+php_errors.log
+
+# ---------------------------------------------------------
+# NE PAS ignorer : assets/img contient les visuels des membres,
+# ils font partie du livrable et doivent être versionnés.
+# ---------------------------------------------------------

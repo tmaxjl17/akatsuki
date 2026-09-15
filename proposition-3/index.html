@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REGISTRE — Numéro 01 · AuraGroup</title>
+<meta name="description" content="Registre, la revue interne d'AuraGroup. Numéro 01 : les dix membres, leurs techniques interdites et le journal des missions.">
+<meta name="theme-color" content="#EFEBE3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ak-cloud" viewBox="0 0 100 100">
+      <path d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#dossier">Aller au dossier</a>
+
+<!-- ===================== OURS DE TÊTE ===================== -->
+<header class="masthead">
+  <div class="masthead__unit">
+    <a class="masthead__back" href="../">&lsaquo; Propositions</a>
+    <div>
+      <p class="masthead__name">Registre</p>
+      <p class="masthead__sub">Revue interne de l'organisation<br>組織の記録</p>
+    </div>
+  </div>
+
+  <div class="masthead__unit masthead__unit--mid">
+    <p class="masthead__label">Numéro</p>
+    <p class="masthead__issue">01</p>
+    <p class="masthead__label">An 18 — Amegakure</p>
+  </div>
+
+  <div class="masthead__unit masthead__unit--end">
+    <p class="masthead__jp">暁</p>
+    <div>
+      <p class="masthead__name masthead__name--sm">AuraGroup</p>
+      <p class="masthead__sub">Pays de la Pluie — Est. An 00<br>Tirage restreint · dix exemplaires</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== COUVERTURE ===================== -->
+  <section class="cover" id="couverture">
+
+    <aside class="cover__rail" aria-hidden="true">
+      <p class="vtext vtext--jp">最強は、孤独の中で生まれる。</p>
+      <p class="vtext">— La vraie force naît dans la solitude</p>
+    </aside>
+
+    <div class="cover__type" id="coverType">
+      <h1 class="fill" id="coverTitle">
+        <span class="fill__line" id="coverL1">Pain</span>
+        <span class="fill__line fill__line--2" id="coverL2">Amegakure</span>
+      </h1>
+      <!-- Découpe du personnage posée devant les lettres, si fournie -->
+      <div class="cover__front" id="coverFront"></div>
+    </div>
+
+    <aside class="cover__side">
+      <div class="cover__ident">
+        <p class="cover__kana" id="coverKana">ペイン</p>
+        <p class="cover__roman" id="coverRoman">Pain — Le Dieu d'Amegakure</p>
+        <p class="cover__org">AuraGroup<br>Membre <span id="coverIndex">01</span> / 10 — Rang S</p>
+      </div>
+
+      <blockquote class="cover__quote">
+        <span class="cover__mark" aria-hidden="true">“</span>
+        <p id="coverExcerpt">Chef de l'Akatsuki, Nagato manie le Rinnegan à travers six corps distincts.</p>
+        <span class="cover__mark cover__mark--end" aria-hidden="true">”</span>
+      </blockquote>
+
+      <div class="cover__pager">
+        <button class="pager__btn" type="button" id="prevBtn" aria-label="Membre précédent">&larr;</button>
+        <span class="pager__label">Feuilleter</span>
+        <button class="pager__btn" type="button" id="nextBtn" aria-label="Membre suivant">&rarr;</button>
+      </div>
+    </aside>
+
+    <div class="cover__foot">
+      <p class="cover__tagline">La vraie force n'est pas dans la puissance, mais dans le silence.<br><span>真の強さとは、力ではなく、沈黙の中にある。</span></p>
+      <div class="cover__stamp">
+        <span class="barcode" aria-hidden="true"></span>
+        <span class="cover__stampline">An 18 / Registre — Amegakure</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOMMAIRE ===================== -->
+  <section class="section toc" id="sommaire">
+    <div class="rubric"><span class="rubric__num">00</span><h2 class="rubric__title">Sommaire</h2></div>
+    <ol class="toc__list">
+      <li><a href="#dossier"><span class="toc__n">01</span><span class="toc__t">Le dossier</span><span class="toc__d">Fiche complète du membre en couverture</span></a></li>
+      <li><a href="#les-dix"><span class="toc__n">02</span><span class="toc__t">Les dix</span><span class="toc__d">Index intégral de l'organisation</span></a></li>
+      <li><a href="#interdits"><span class="toc__n">03</span><span class="toc__t">Techniques interdites</span><span class="toc__d">Ce que les villages ont rayé de leurs rouleaux</span></a></li>
+      <li><a href="#chronologie"><span class="toc__n">04</span><span class="toc__t">Chronologie</span><span class="toc__d">Vingt ans d'ombre, An 00 à An 18</span></a></li>
+      <li><a href="#missions"><span class="toc__n">05</span><span class="toc__t">Registre des missions</span><span class="toc__d">Sept opérations majeures</span></a></li>
+    </ol>
+  </section>
+
+  <!-- ===================== LE DOSSIER ===================== -->
+  <section class="section dossier" id="dossier">
+    <div class="rubric"><span class="rubric__num">01</span><h2 class="rubric__title">Le dossier</h2></div>
+
+    <div class="spread">
+      <!-- Trois volets numérotés -->
+      <div class="panels">
+        <article class="panel">
+          <span class="panel__num">01.</span>
+          <span class="panel__label">Village d'origine</span>
+          <p class="panel__value" id="pVillage">Amegakure</p>
+          <p class="panel__sub" id="pRank">Chef — rang S</p>
+        </article>
+
+        <article class="panel panel--center">
+          <span class="panel__num">02.</span>
+          <div class="panel__media" id="pMedia">
+            <svg class="panel__cloud" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+            <span class="panel__tag" id="pTag">[IMAGE_HERO_PAIN]</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <span class="panel__num">03.</span>
+          <span class="panel__label">Binôme imposé</span>
+          <p class="panel__value" id="pPartner">Konan</p>
+          <p class="panel__sub" id="pStatus">Actif</p>
+        </article>
+      </div>
+
+      <!-- Pastilles d'identité -->
+      <ul class="chips" id="chips"></ul>
+
+      <!-- Texte + indices -->
+      <div class="dossier__grid">
+        <div class="dossier__text">
+          <h3 class="dossier__name" id="dName">À propos de Pain</h3>
+          <p class="dossier__bio" id="dBio"></p>
+          <p class="dossier__note" id="dNote"></p>
+
+          <p class="minilabel">Capacités répertoriées</p>
+          <ul class="abilities" id="dAbilities"></ul>
+        </div>
+
+        <aside class="dossier__aside">
+          <p class="minilabel">Indices relevés</p>
+          <dl class="bars" id="bars"></dl>
+
+          <div class="kin">
+            <span class="kin__label">Technique interdite</span>
+            <p class="kin__name" id="kName">Rinne Tensei</p>
+            <p class="kin__desc" id="kDesc"></p>
+            <p class="kin__cost"><span>Prix à payer</span><em id="kCost"></em></p>
+            <span class="kin__status" id="kStatus">Classe Zéro</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LES DIX ===================== -->
+  <section class="section tenth" id="les-dix">
+    <div class="rubric"><span class="rubric__num">02</span><h2 class="rubric__title">Les dix</h2></div>
+    <p class="chapo">Dix anneaux, dix places numérotées. Survolez un nom pour le voir se remplir, cliquez pour le porter en couverture.</p>
+    <ol class="index" id="index"></ol>
+  </section>
+
+  <!-- ===================== TECHNIQUES INTERDITES ===================== -->
+  <section class="section section--ink interdits" id="interdits">
+    <div class="rubric rubric--light"><span class="rubric__num">03</span><h2 class="rubric__title">Techniques interdites</h2></div>
+    <p class="chapo chapo--light">Chaque membre a apporté une technique que son village avait rayée de ses rouleaux. Toutes se paient : d'un œil, d'un cœur, d'une vie.</p>
+    <div class="kins" id="kins"></div>
+  </section>
+
+  <!-- ===================== CHRONOLOGIE ===================== -->
+  <section class="section chrono" id="chronologie">
+    <div class="rubric"><span class="rubric__num">04</span><h2 class="rubric__title">Chronologie</h2></div>
+    <ol class="years">
+      <li class="year">
+        <span class="year__n">An 00</span>
+        <div>
+          <h3 class="year__t">Les ruines d'Amegakure</h3>
+          <p class="year__d">Trois orphelins de la guerre fondent un mouvement pacifiste dans un pays transformé en champ de bataille par ses voisins.</p>
+        </div>
+      </li>
+      <li class="year">
+        <span class="year__n">An 04</span>
+        <div>
+          <h3 class="year__t">La trahison du pont</h3>
+          <p class="year__d">Yahiko meurt dans un piège tendu par Hanzo et la Racine. Le mouvement survit à son fondateur, mais pas sa doctrine.</p>
+        </div>
+      </li>
+      <li class="year">
+        <span class="year__n">An 07</span>
+        <div>
+          <h3 class="year__t">Les dix anneaux</h3>
+          <p class="year__d">Dix anneaux sont forgés, un par doigt, un par place. On cesse de recruter des convaincus pour ne recruter que des déserteurs.</p>
+        </div>
+      </li>
+      <li class="year">
+        <span class="year__n">An 11</span>
+        <div>
+          <h3 class="year__t">Le pacte mercenaire</h3>
+          <p class="year__d">Premier contrat vendu à un pays tiers. Les primes financent les informateurs, les planques et les sceaux.</p>
+        </div>
+      </li>
+      <li class="year">
+        <span class="year__n">An 15</span>
+        <div>
+          <h3 class="year__t">Ouverture de la chasse</h3>
+          <p class="year__d">Le registre des neuf bijuu est établi, les binômes sont figés, la statue de scellement descend dans la grotte.</p>
+        </div>
+      </li>
+      <li class="year year--now">
+        <span class="year__n">An 18</span>
+        <div>
+          <h3 class="year__t">Konoha</h3>
+          <p class="year__d">Six corps entrent dans le village le plus puissant du continent et en ressortent sur un cratère.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== MISSIONS ===================== -->
+  <section class="section missions" id="missions">
+    <div class="rubric"><span class="rubric__num">05</span><h2 class="rubric__title">Registre des missions</h2></div>
+    <div class="log">
+      <div class="log__row log__row--head">
+        <span>N°</span><span>Opération</span><span>Terrain &amp; équipe</span><span>Issue</span>
+      </div>
+      <div class="log__row"><span class="log__n">01</span><span class="log__op">Capture de l'Ichibi</span><span class="log__m">Sunagakure — Deidara &amp; Sasori</span><span class="log__s">Scellé</span></div>
+      <div class="log__row"><span class="log__n">02</span><span class="log__op">Traque du Nibi</span><span class="log__m">Kumogakure — Hidan &amp; Kakuzu</span><span class="log__s">Scellé</span></div>
+      <div class="log__row"><span class="log__n">03</span><span class="log__op">Récupération du Sanbi</span><span class="log__m">Lac de Kirigakure — Tobi &amp; Deidara</span><span class="log__s">Scellé</span></div>
+      <div class="log__row"><span class="log__n">04</span><span class="log__op">Élimination du Yonbi</span><span class="log__m">Frontière d'Iwa — Kisame</span><span class="log__s">Scellé</span></div>
+      <div class="log__row"><span class="log__n">05</span><span class="log__op">Assaut sur Konoha</span><span class="log__m">Konohagakure — Pain &amp; Konan</span><span class="log__s">Village rasé</span></div>
+      <div class="log__row log__row--off"><span class="log__n">06</span><span class="log__op">Capture du Hachibi</span><span class="log__m">Kumogakure — Kisame</span><span class="log__s">Échec</span></div>
+      <div class="log__row log__row--off"><span class="log__n">07</span><span class="log__op">Capture du Kyubi</span><span class="log__m">En cours — Tobi</span><span class="log__s">En cours</span></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== COLOPHON ===================== -->
+<footer class="colophon">
+  <div class="colophon__unit">
+    <svg class="colophon__mark" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+    <p class="colophon__title">Registre</p>
+    <p class="colophon__sub">Numéro 01 — An 18<br>Imprimé à Amegakure</p>
+  </div>
+  <div class="colophon__unit">
+    <p class="minilabel">Au sommaire</p>
+    <a href="#dossier">Le dossier</a>
+    <a href="#les-dix">Les dix</a>
+    <a href="#interdits">Techniques interdites</a>
+  </div>
+  <div class="colophon__unit">
+    <p class="minilabel">Archives</p>
+    <a href="#chronologie">Chronologie</a>
+    <a href="#missions">Missions</a>
+    <a href="../">Autres propositions</a>
+  </div>
+  <div class="colophon__unit colophon__unit--end">
+    <span class="barcode" aria-hidden="true"></span>
+    <p class="colophon__sub">« La douleur seule permet de grandir. »<br>Pain — Amegakure</p>
+  </div>
+</footer>
+
+<script src="assets/js/members.js" defer></script>
+<script src="assets/js/extras.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

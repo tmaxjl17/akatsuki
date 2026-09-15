@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AuraGroup — Propositions</title>
+<meta name="description" content="Sélection des propositions de landing page pour AuraGroup.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/hub.css">
+</head>
+<body>
+
+<!-- Sprite SVG : le nuage Akatsuki -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ak-cloud" viewBox="0 0 100 100">
+      <path d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z"/>
+    </symbol>
+    <symbol id="ak-sigil" viewBox="0 0 120 120">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 4v112M4 60h112"/>
+        <circle cx="60" cy="60" r="37"/>
+        <circle cx="60" cy="60" r="7"/>
+        <path transform="scale(1.2)" d="M50 8C62 8 70 18 70 28c12 0 22 10 22 22 0 14-12 24-26 22-4 12-14 20-24 20-12 0-22-8-24-20C8 70 2 60 4 50c2-12 12-20 22-20C28 18 38 8 50 8Z"/>
+        <path d="M12 44c-7 8-7 24 0 32M108 44c7 8 7 24 0 32M44 12c8-7 24-7 32 0M44 108c8 7 24 7 32 0"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="clouds" aria-hidden="true">
+  <svg class="clouds__item clouds__item--1" focusable="false"><use href="#ak-cloud"/></svg>
+  <svg class="clouds__item clouds__item--2" focusable="false"><use href="#ak-cloud"/></svg>
+</div>
+
+<header class="hub-head">
+  <span class="brand">
+    <svg class="brand__logo" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+    <span>AuraGroup</span>
+  </span>
+  <p class="eyebrow"><span class="rule"></span><span>Direction artistique</span></p>
+  <h1 class="hub-title">Choisissez une <em>proposition</em></h1>
+  <p class="hub-sub">Chaque proposition est une page complète et autonome. Ouvrez-la pour la parcourir en conditions réelles, puis revenez ici pour comparer.</p>
+</header>
+
+<!--
+  Pour ajouter une proposition :
+  1. dupliquez le dossier proposition-1 en proposition-2 ;
+  2. copiez un bloc <a class="prop"> ci-dessous et mettez à jour href, numéro, titre et description.
+-->
+<main class="props">
+
+  <a class="prop" href="proposition-1/">
+    <span class="prop__accent"></span>
+    <span class="thumb">
+      <span class="thumb__band"></span>
+      <svg class="thumb__cloud" aria-hidden="true" focusable="false"><use href="#ak-cloud"/></svg>
+      <span class="thumb__lines"><i></i><i></i><i></i></span>
+      <span class="thumb__cards"><i></i><i></i><i></i><i></i></span>
+    </span>
+    <span class="prop__body">
+      <span class="prop__meta"><span class="prop__num">01</span><span>Sombre &amp; écarlate</span></span>
+      <h2 class="prop__name">Dix ombres, un seul dessein</h2>
+      <p class="prop__desc">Héros plein écran et fiche technique par membre, galerie des dix dossiers, chronologie, code de l'organisation, registre des techniques interdites et journal des missions.</p>
+      <span class="prop__foot">
+        <span class="prop__tags">
+          <span class="prop__tag">Anton</span>
+          <span class="prop__tag">Parallaxe</span>
+          <span class="prop__tag">Dossiers</span>
+          <span class="prop__tag">Registres</span>
+        </span>
+        <span class="prop__go">Ouvrir</span>
+      </span>
+    </span>
+  </a>
+
+  <a class="prop" href="proposition-2/">
+    <span class="prop__accent"></span>
+    <span class="thumb thumb--paper">
+      <svg class="thumb__sigil" aria-hidden="true" focusable="false"><use href="#ak-sigil"/></svg>
+      <span class="thumb__script"></span>
+      <span class="thumb__head"><i></i><i></i></span>
+      <span class="thumb__strip"></span>
+    </span>
+    <span class="prop__body">
+      <span class="prop__meta"><span class="prop__num">02</span><span>Claire &amp; éditoriale</span></span>
+      <h2 class="prop__name">Le registre d'Ame</h2>
+      <p class="prop__desc">Même organisation, direction artistique inspirée de voodoogroup.africa : ivoire et rouge sang, titrage condensé, nuage traité en sigle rituel. Dossiers en index, domaines en accordéon, chiffres animés et formulaire de recrutement.</p>
+      <span class="prop__foot">
+        <span class="prop__tags">
+          <span class="prop__tag">Oswald</span>
+          <span class="prop__tag">Sigles</span>
+          <span class="prop__tag">Accordéon</span>
+          <span class="prop__tag">Formulaire</span>
+        </span>
+        <span class="prop__go">Ouvrir</span>
+      </span>
+    </span>
+  </a>
+
+  <a class="prop" href="proposition-3/">
+    <span class="prop__accent"></span>
+    <span class="thumb thumb--mag">
+      <span class="thumb__mast"></span>
+      <span class="thumb__issue"></span>
+      <span class="thumb__rule"></span>
+      <span class="thumb__word"><i></i><i></i></span>
+      <span class="thumb__bars"></span>
+    </span>
+    <span class="prop__body">
+      <span class="prop__meta"><span class="prop__num">03</span><span>Magazine &amp; affiche</span></span>
+      <h2 class="prop__name">Registre 01</h2>
+      <p class="prop__desc">Mise en page de revue sur papier ivoire : le nom du membre en lettres géantes remplies par son visuel, texte vertical japonais, fiches numérotées, barres d'indices et exergue en couverture.</p>
+      <span class="prop__foot">
+        <span class="prop__tags">
+          <span class="prop__tag">Archivo Black</span>
+          <span class="prop__tag">Image dans le texte</span>
+          <span class="prop__tag">Éditorial</span>
+        </span>
+        <span class="prop__go">Ouvrir</span>
+      </span>
+    </span>
+  </a>
+
+</main>
+
+<footer class="hub-foot">
+  <span>AuraGroup — Amegakure</span>
+  <span><a href="proposition-1/">Proposition 1</a> · <a href="proposition-2/">Proposition 2</a> · <a href="proposition-3/">Proposition 3</a></span>
+</footer>
+
+</body>
+</html>
